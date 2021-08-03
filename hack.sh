@@ -32,16 +32,16 @@ install_homebrew() {
 
 install_apps() {
   echo_ok "Installing apps with Homebrew cask..."
-  brew cask install google-chrome
-  brew cask install visual-studio-code
-  brew cask install iterm2
-  brew cask install insomnia
-  brew cask install spotify
+  brew install google-chrome
+  brew install visual-studio-code
+  brew install iterm2
+  brew install insomnia
+  brew install spotify
 }
 
 
 install_vs_code_extensions() {
-  echo_ok "Installing VS Code extensions"
+  echo_ok "Installing VS Code extensions..."
   code --install-extension uloco.theme-bluloco-dark
   code --install-extension naumovs.color-highlight
   code --install-extension ms-vscode.hexeditor
@@ -55,9 +55,35 @@ install_vs_code_extensions() {
   code --install-extension sonarsource.sonarlint-vscode
 }
 
+
+symlink_vscode_settings() {
+  echo_ok "Symlinking VS Code extensions..."
+  symlink settings.json "~/Library/Application Support/Code/User/settings.json"
+}
+
+
 bootstrap_git() {
   echo_ok "Symlinking gitconfig..."
   symlink gitconfig ~/.gitconfig
+}
+
+
+bootstrap_zsh() {
+  echo_ok "Installing Oh My Zsh..."
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
+  sleep 5
+
+  echo_ok "Updating zsh plugins..."
+  git submodule update --init --recursive
+
+  echo_ok "Symlinking zsh config files..."
+  symlink zshrc ~/.zshrc
+}
+
+
+bootstrap_vim() {
+  echo_ok "Symlinking vimrc..."
+  symlink vimrc ~/.vimrc
 }
 
 
@@ -65,5 +91,11 @@ main() {
   install_homebrew
   install_apps
   install_vs_code_extensions
+  symlink_vscode_settings
   bootstrap_git
+  bootstrap_zsh
+  bootstrap_vim
 }
+
+
+main

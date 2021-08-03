@@ -1,3 +1,11 @@
+export ZSH="/Users/colejcummins/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
 alias mypy='mypy --disallow-incomplete-defs --check-untyped-defs'
 alias python='python3'
 alias pip='pip3'
