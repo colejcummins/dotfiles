@@ -49,14 +49,12 @@ install_vs_code_extensions() {
   code --install-extension ms-python.python
   code --install-extension eamodio.gitlens
   code --install-extension visualstudioexptteam.vscodeintellicode
-  code --install-extension jpoissonnier.vscode-styled-components
   code --install-extension laurenttreguier.vscode-simple-icons
   code --install-extension wix.vscode-import-cost
   code --install-extension sonarsource.sonarlint-vscode
   code --install-extension dbaeumer.vscode-eslint
   code --install-extension github.copilot
   code --install-extension simonsiefke.svg-preview
-  code --install-extension
 }
 
 
