@@ -97,6 +97,7 @@ bootstrap_vim() {
 main() {
   install_homebrew
   install_apps
+  intstall_dev_tools
   install_vs_code_extensions
   symlink_vscode_settings
   bootstrap_git
