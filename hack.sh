@@ -57,6 +57,11 @@ install_vs_code_extensions() {
   code --install-extension simonsiefke.svg-preview
 }
 
+intstall_dev_tools() {
+  echo_ok "Installing Developer Tools..."
+  yarn global add typescript
+  yarn global add node 
+}
 
 symlink_vscode_settings() {
   echo_ok "Symlinking VS Code extensions..."
