@@ -6,5 +6,5 @@ Some good 'ole dotfiles
 ```shell
 git clone --recursive https://github.com/colejcummins/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./bootstrap.sh
+bash hack.sh
 ```
