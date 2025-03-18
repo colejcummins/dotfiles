@@ -42,19 +42,14 @@ install_apps() {
 
 install_vs_code_extensions() {
   echo_ok "Installing VS Code extensions..."
-  code --install-extension uloco.theme-bluloco-dark
   code --install-extension naumovs.color-highlight
   code --install-extension ms-vscode.hexeditor
-  code --install-extension ms-vscode.cpptools
-  code --install-extension ms-python.python
   code --install-extension eamodio.gitlens
-  code --install-extension visualstudioexptteam.vscodeintellicode
   code --install-extension laurenttreguier.vscode-simple-icons
   code --install-extension wix.vscode-import-cost
-  code --install-extension sonarsource.sonarlint-vscode
   code --install-extension dbaeumer.vscode-eslint
-  code --install-extension github.copilot
   code --install-extension simonsiefke.svg-preview
+  code --install-extension yzhang.markdown-all-in-one
 }
 
 intstall_dev_tools() {
